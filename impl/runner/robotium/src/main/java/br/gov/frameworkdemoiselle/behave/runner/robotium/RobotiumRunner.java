@@ -4,6 +4,9 @@ import java.io.File;
 
 import org.apache.log4j.Logger;
 
+import com.jayway.android.robotium.solo.Solo;
+
+import android.app.Activity;
 import br.gov.frameworkdemoiselle.behave.message.BehaveMessage;
 import br.gov.frameworkdemoiselle.behave.runner.Runner;
 import br.gov.frameworkdemoiselle.behave.runner.ui.Element;
@@ -15,6 +18,9 @@ public class RobotiumRunner implements Runner {
 	private Logger logger = Logger.getLogger(RobotiumRunner.class);
 
 	private BehaveMessage message = new BehaveMessage(MESSAGEBUNDLE);
+	
+	public Solo solo;
+	public Activity mainActivity;
 
 	@Override
 	public void start() {
